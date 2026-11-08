@@ -1,0 +1,2045 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ORIGEN — Productos importados del mundo</title>
+  <meta name="description" content="ORIGEN: productos auténticos importados directamente de Japón, Italia, Marruecos, Corea del Sur, Perú y Turquía. Envío gratis desde $60.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C2582F'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='18' fill='%23FAF7F2'%3EO%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+/* =========================================================
+   ORIGEN — Estilos
+   Paleta: crema, carbón, terracota, verde oliva y arena.
+   ========================================================= */
+
+:root {
+  --bg: #FAF7F2;
+  --surface: #FFFFFF;
+  --surface-2: #F3EEE6;
+  --text: #1F1D1A;
+  --muted: #6B655C;
+  --brand: #C2582F;
+  --olive: #5B6B3A;
+  --sand: #E8DFD1;
+  --line: #E8DFD1;
+  --line-strong: rgba(31, 29, 26, .16);
+  --btn-bg: #B04A22;
+  --btn-bg-hover: #963D1A;
+  --btn-ink: #FFFFFF;
+  --dark-block: #1F1D1A;
+  --dark-block-ink: #FAF7F2;
+  --toast-link: #F2A47F;
+  --tile-filter: none;
+  --header-bg: rgba(250, 247, 242, .82);
+  --shadow: 0 1px 2px rgba(31, 29, 26, .04), 0 8px 24px rgba(31, 29, 26, .06);
+  --shadow-hover: 0 2px 4px rgba(31, 29, 26, .04), 0 22px 44px -12px rgba(31, 29, 26, .18);
+  --shadow-lg: 0 30px 80px -20px rgba(31, 29, 26, .35);
+
+  --radius: 16px;
+  --radius-sm: 12px;
+  --radius-lg: 28px;
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --emoji: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16140F;
+    --surface: #1E1B16;
+    --surface-2: #25211B;
+    --text: #F2EDE4;
+    --muted: #A9A193;
+    --brand: #E2805A;
+    --olive: #A3B57A;
+    --sand: #3A342B;
+    --line: #2F2A23;
+    --line-strong: rgba(242, 237, 228, .18);
+    --btn-bg: #E2805A;
+    --btn-bg-hover: #EC9472;
+    --btn-ink: #1A1612;
+    --dark-block: #25211B;
+    --dark-block-ink: #F2EDE4;
+    --toast-link: #A9481F;
+    --tile-filter: saturate(.9) brightness(.86);
+    --header-bg: rgba(22, 20, 15, .8);
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    --shadow-hover: 0 22px 44px -12px rgba(0, 0, 0, .6);
+    --shadow-lg: 0 30px 80px -20px rgba(0, 0, 0, .7);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #16140F;
+  --surface: #1E1B16;
+  --surface-2: #25211B;
+  --text: #F2EDE4;
+  --muted: #A9A193;
+  --brand: #E2805A;
+  --olive: #A3B57A;
+  --sand: #3A342B;
+  --line: #2F2A23;
+  --line-strong: rgba(242, 237, 228, .18);
+  --btn-bg: #E2805A;
+  --btn-bg-hover: #EC9472;
+  --btn-ink: #1A1612;
+  --dark-block: #25211B;
+  --dark-block-ink: #F2EDE4;
+  --toast-link: #A9481F;
+  --tile-filter: saturate(.9) brightness(.86);
+  --header-bg: rgba(22, 20, 15, .8);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+  --shadow-hover: 0 22px 44px -12px rgba(0, 0, 0, .6);
+  --shadow-lg: 0 30px 80px -20px rgba(0, 0, 0, .7);
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color .3s, color .3s;
+}
+body.no-scroll { overflow: hidden; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+input, select { font: inherit; color: inherit; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.1; letter-spacing: -.015em; margin: 0; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: 16px; top: -60px; z-index: 100;
+  background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 999px;
+}
+.skip-link:focus { top: 12px; }
+
+.container { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: 16px; }
+@media (min-width: 640px) { .container { padding-inline: 24px; } }
+@media (min-width: 1024px) { .container { padding-inline: 32px; } }
+
+.icon { width: 20px; height: 20px; flex: none; }
+.icon--fill { fill: currentColor; stroke: none; }
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  height: 50px; padding: 0 1.5rem; border-radius: 999px;
+  font-weight: 500; font-size: .95rem; white-space: nowrap;
+  transition: background-color .25s, color .25s, border-color .25s, box-shadow .25s, transform .25s;
+}
+.btn .icon { width: 18px; height: 18px; transition: transform .25s var(--ease); }
+.btn:hover .icon--arrow { transform: translateX(4px); }
+.btn:active { transform: scale(.98); }
+.btn--primary { background: var(--btn-bg); color: var(--btn-ink); }
+.btn--primary:hover { background: var(--btn-bg-hover); box-shadow: 0 12px 28px -12px var(--brand); }
+.btn--ghost { border: 1px solid var(--line-strong); }
+.btn--ghost:hover { border-color: var(--text); }
+.btn--dark { background: var(--text); color: var(--bg); }
+.btn--dark:hover { background: var(--brand); color: #fff; }
+.btn--sm { height: 40px; padding: 0 1rem; font-size: .87rem; }
+.btn--block { width: 100%; }
+.btn.is-added { background: var(--olive); color: #fff; }
+
+.icon-btn {
+  position: relative; display: inline-grid; place-items: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  transition: background-color .2s, color .2s;
+}
+.icon-btn:hover { background: var(--surface-2); }
+.icon-btn--outline { border: 1px solid var(--line-strong); width: 50px; height: 50px; }
+.text-btn { font-size: .85rem; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.text-btn:hover { color: var(--brand); }
+
+.count {
+  position: absolute; top: 2px; right: 0;
+  min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px;
+  background: var(--brand); color: #fff; font-size: .68rem; font-weight: 600;
+  display: grid; place-items: center; line-height: 1;
+}
+.count.bump { animation: bump .45s var(--ease); }
+@keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.45); } 100% { transform: scale(1); } }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--brand); margin-bottom: 1rem;
+}
+.eyebrow .icon { width: 16px; height: 16px; }
+.eyebrow--light { color: #F2A47F; }
+.lead { font-size: clamp(1rem, 1.4vw, 1.12rem); color: var(--muted); max-width: 52ch; }
+
+.link-arrow { display: inline-flex; align-items: center; gap: .4rem; font-weight: 500; font-size: .95rem; white-space: nowrap; }
+.link-arrow .icon { width: 18px; height: 18px; transition: transform .25s var(--ease); }
+.link-arrow:hover { color: var(--brand); }
+.link-arrow:hover .icon { transform: translateX(4px); }
+
+/* ---------- Barra de anuncios ---------- */
+.announce { background: var(--dark-block); color: var(--dark-block-ink); font-size: .8rem; }
+.announce p { display: flex; align-items: center; justify-content: center; gap: .6rem; padding: 9px 16px; text-align: center; }
+.announce .icon { width: 16px; height: 16px; opacity: .8; }
+.announce__extra { display: none; opacity: .85; }
+@media (min-width: 640px) { .announce__extra { display: inline; } }
+
+/* ---------- Encabezado ---------- */
+.header {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--header-bg);
+  backdrop-filter: saturate(1.4) blur(14px);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, box-shadow .3s;
+}
+.header.is-scrolled { border-color: var(--line); box-shadow: 0 6px 24px -18px rgba(0, 0, 0, .35); }
+.header__inner { position: relative; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; height: 68px; }
+.logo {
+  font-family: var(--serif); font-weight: 600; font-size: 1.45rem; letter-spacing: .16em;
+  line-height: 1; display: inline-flex; align-items: baseline;
+}
+.logo__dot { color: var(--brand); letter-spacing: 0; }
+.nav { display: none; }
+.header__actions { display: flex; align-items: center; gap: 2px; }
+.search { display: none; }
+.header__menu { margin-left: -8px; }
+
+.header.is-searching .search {
+  display: flex; position: absolute; left: 16px; right: 16px; top: calc(100% + 8px);
+  box-shadow: var(--shadow); background: var(--surface);
+}
+.search {
+  align-items: center; gap: .5rem; height: 44px; padding: 0 14px;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px;
+  transition: border-color .2s, background-color .2s;
+}
+.search:focus-within { border-color: var(--brand); background: var(--surface); }
+.search .icon { width: 18px; height: 18px; color: var(--muted); }
+.search input { border: 0; background: none; outline: none; width: 100%; font-size: .9rem; }
+.search input::placeholder { color: var(--muted); }
+
+@media (min-width: 1080px) {
+  .header__inner { grid-template-columns: auto 1fr auto; height: 76px; gap: 24px; }
+  .header__menu, .search-toggle { display: none; }
+  .nav { display: flex; justify-content: center; gap: 30px; font-size: .93rem; }
+  .nav a { position: relative; padding: 6px 0; }
+  .nav a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+    background: var(--brand); transform: scaleX(0); transform-origin: right; transition: transform .35s var(--ease);
+  }
+  .nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+  .search { display: flex; width: 230px; margin-right: 8px; }
+  .header.is-searching .search { position: static; box-shadow: none; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  padding-block: clamp(40px, 7vw, 96px) clamp(56px, 8vw, 110px);
+  background:
+    radial-gradient(60% 50% at 85% 10%, color-mix(in srgb, var(--brand) 14%, transparent), transparent 70%),
+    radial-gradient(50% 50% at 0% 100%, color-mix(in srgb, var(--olive) 12%, transparent), transparent 70%);
+}
+.hero__grid { display: grid; gap: 48px; align-items: center; }
+.hero h1 { font-size: clamp(2.9rem, 7.2vw, 5.6rem); letter-spacing: -.03em; line-height: .98; margin-bottom: 1.4rem; }
+.hero h1 em { font-style: italic; color: var(--brand); }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 2rem; }
+.hero__stats { display: flex; gap: clamp(20px, 4vw, 44px); margin: 2.6rem 0 0; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.hero__stats dt { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1; }
+.hero__stats dd { margin: .35rem 0 0; font-size: .8rem; color: var(--muted); }
+.star-inline { color: var(--brand); font-size: .7em; margin-left: 2px; vertical-align: .25em; }
+
+.hero__art {
+  position: relative; display: grid; gap: 14px;
+  grid-template-columns: 1.15fr 1fr; grid-template-rows: 1fr 1fr;
+  height: clamp(380px, 58vw, 600px);
+}
+.hero__tile { position: relative; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); }
+.hero__tile--0 { grid-row: span 2; }
+.tile-chip {
+  position: absolute; left: 12px; bottom: 12px;
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: 6px 12px 6px 8px; border-radius: 999px;
+  background: rgba(255, 255, 255, .78); color: #1F1D1A; backdrop-filter: blur(8px);
+  font-size: .75rem; font-weight: 500;
+}
+.float-card {
+  position: absolute; z-index: 2;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 18px; padding: 12px 16px; box-shadow: var(--shadow-hover);
+  font-size: .82rem; line-height: 1.35;
+  animation: float 6s ease-in-out infinite;
+}
+.float-card strong { display: block; font-size: .9rem; }
+.float-card small { color: var(--muted); }
+.float-card--a { left: -10px; bottom: 72px; }
+.float-card--b { max-width: 240px; }
+.float-card--b { right: -6px; top: 22px; animation-delay: -3s; }
+.float-card__emoji { font-family: var(--emoji); font-size: 1.6rem; line-height: 1; }
+.float-card .stars { color: var(--brand); display: flex; gap: 1px; }
+.float-card .stars .icon { width: 13px; height: 13px; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+@media (min-width: 900px) {
+  .hero__grid { grid-template-columns: 1.05fr .95fr; gap: 64px; }
+  .float-card--a { left: -36px; }
+}
+
+/* ---------- Visual de producto (marcador de imagen) ---------- */
+.pv {
+  position: relative; display: grid; place-items: center;
+  width: 100%; height: 100%;
+  container-type: size;
+  background:
+    radial-gradient(120% 80% at 28% 12%, rgba(255, 255, 255, .6), transparent 55%),
+    linear-gradient(160deg, var(--a), var(--b));
+  filter: var(--tile-filter);
+  overflow: hidden; isolation: isolate;
+}
+.pv::before {
+  content: ""; position: absolute; left: 50%; bottom: 17%;
+  width: 58%; height: 9%; transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(40, 24, 10, .24), transparent);
+  z-index: -1;
+}
+.pv::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: .55;
+  background-image: radial-gradient(rgba(255, 255, 255, .45) 1px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+.pv__emoji {
+  font-family: var(--emoji); line-height: 1;
+  font-size: 4.5rem;
+  font-size: clamp(1.6rem, 38cqmin, 10rem);
+  filter: drop-shadow(0 14px 14px rgba(40, 24, 10, .22));
+  transition: transform .7s var(--ease);
+}
+.pv__mark {
+  position: absolute; left: 14px; bottom: 12px;
+  font-size: .6rem; letter-spacing: .24em; text-transform: uppercase; font-weight: 600;
+  color: rgba(31, 29, 26, .45);
+}
+.pv img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pv--sm .pv__mark { display: none; }
+.pv--sm .pv__emoji { filter: drop-shadow(0 6px 6px rgba(40, 24, 10, .2)); }
+.pv--v1 .pv__emoji { transform: scale(1.75) translate(10%, 8%); }
+.pv--v1::after { opacity: 0; }
+.pv--v2 .pv__emoji { font-size: clamp(1.2rem, 26cqmin, 7rem); transform: translate(18%, 14%); }
+.pv__flag { position: absolute; left: 12%; top: 14%; width: 34%; border-radius: 6px; box-shadow: 0 10px 24px -8px rgba(0, 0, 0, .35); transform: rotate(-6deg); }
+.pv__flag .flag { width: 100%; border-radius: 6px; }
+
+/* ---------- Franja de confianza ---------- */
+.trust { border-block: 1px solid var(--line); background: var(--surface); }
+.trust__grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+.trust__item { display: flex; align-items: center; gap: 12px; padding: 20px 8px; }
+.trust__item strong { display: block; font-weight: 600; font-size: .9rem; }
+.trust__item span:not(.trust__icon) { display: block; font-size: .8rem; color: var(--muted); }
+.trust__icon { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--surface-2); color: var(--brand); }
+@media (min-width: 900px) {
+  .trust__grid { grid-template-columns: repeat(4, 1fr); }
+  .trust__item { justify-content: center; padding: 26px 12px; }
+  .trust__item + .trust__item { border-left: 1px solid var(--line); }
+}
+
+/* ---------- Secciones ---------- */
+.section { padding-block: clamp(64px, 9vw, 120px); }
+.section--tight { padding-block: clamp(40px, 6vw, 80px); }
+.section--tint { background: var(--surface-2); }
+.section--line { border-top: 1px solid var(--line); }
+.section-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px; margin-bottom: clamp(28px, 4vw, 48px); }
+.section-head h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
+.section-head__text { max-width: 40ch; color: var(--muted); }
+.section-head--center { justify-content: center; text-align: center; }
+.section-head--center h2 { max-width: 20ch; margin-inline: auto; }
+
+/* ---------- Países ---------- */
+.countries { display: grid; gap: clamp(12px, 2vw, 22px); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) { .countries { grid-template-columns: repeat(3, 1fr); } }
+.country {
+  display: flex; flex-direction: column; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line); overflow: hidden;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
+}
+.country:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: transparent; }
+.country__art {
+  position: relative; aspect-ratio: 4 / 3; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(100% 80% at 25% 10%, rgba(255, 255, 255, .55), transparent 60%), linear-gradient(150deg, var(--a), var(--b));
+  filter: var(--tile-filter);
+  container-type: size;
+}
+.country__flag { width: 34cqw; height: auto; border-radius: 6px; box-shadow: 0 16px 30px -12px rgba(0, 0, 0, .4); transition: transform .6s var(--ease); }
+.country:hover .country__flag { transform: scale(1.06) rotate(-3deg); }
+.country__emojis span {
+  position: absolute; font-family: var(--emoji); font-size: 15cqmin; line-height: 1;
+  filter: drop-shadow(0 8px 8px rgba(40, 24, 10, .2));
+  transition: transform .6s var(--ease);
+}
+.country__emojis span:nth-child(1) { left: 9%; top: 12%; transform: rotate(-10deg); }
+.country__emojis span:nth-child(2) { right: 9%; top: 16%; transform: rotate(8deg); }
+.country__emojis span:nth-child(3) { right: 20%; bottom: 10%; transform: rotate(-4deg); }
+.country:hover .country__emojis span:nth-child(1) { transform: translate(-4px, -4px) rotate(-14deg); }
+.country:hover .country__emojis span:nth-child(2) { transform: translate(4px, -4px) rotate(12deg); }
+.country:hover .country__emojis span:nth-child(3) { transform: translate(3px, 4px) rotate(-8deg); }
+.country__info { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 6px 12px; padding: 16px; }
+.country__info h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
+.country__info p { font-size: .84rem; color: var(--muted); margin-top: 2px; }
+.country__count { display: inline-flex; align-items: center; gap: .3rem; font-size: .8rem; font-weight: 500; color: var(--brand); white-space: nowrap; }
+.country__count .icon { width: 15px; height: 15px; transition: transform .3s var(--ease); }
+.country:hover .country__count .icon { transform: translateX(3px); }
+@media (max-width: 520px) { .country__info p { display: none; } }
+
+/* ---------- Categorías ---------- */
+.cats {
+  display: grid; gap: 12px;
+  grid-auto-flow: column; grid-auto-columns: minmax(150px, 1fr);
+  overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px;
+  margin-inline: -16px; padding-inline: 16px; scrollbar-width: none;
+}
+.cats::-webkit-scrollbar { display: none; }
+@media (min-width: 900px) { .cats { grid-auto-flow: row; grid-template-columns: repeat(5, 1fr); overflow: visible; margin: 0; padding: 0; } }
+.cat {
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+  padding: 22px 20px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line);
+  transition: border-color .3s, transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.cat:hover { border-color: var(--brand); transform: translateY(-3px); box-shadow: var(--shadow); }
+.cat__emoji {
+  display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 14px;
+  border-radius: 50%; background: var(--surface-2); font-family: var(--emoji); font-size: 1.7rem;
+  transition: transform .5s var(--ease);
+}
+.cat:hover .cat__emoji { transform: scale(1.1) rotate(-6deg); }
+.cat__name { font-family: var(--serif); font-size: 1.15rem; line-height: 1.2; }
+.cat__text { font-size: .8rem; color: var(--muted); }
+.cat__count { margin-top: 8px; font-size: .75rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--brand); }
+
+/* ---------- Rejillas y tarjetas de producto ---------- */
+.grid { display: grid; gap: clamp(12px, 2vw, 24px); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1024px) { .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 720px) { .grid--catalog { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .grid--catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1140px) { .grid--catalog { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.card {
+  position: relative; display: flex; flex-direction: column; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
+  animation: cardIn .6s var(--ease) backwards;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+@keyframes cardIn { from { opacity: 0; transform: translateY(14px); } }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: transparent; }
+.card__media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; }
+.card__open { display: block; width: 100%; height: 100%; }
+.card:hover .pv__emoji { transform: scale(1.08) translateY(-3%); }
+.card__body { display: flex; flex-direction: column; gap: .3rem; padding: 14px 14px 16px; flex: 1; }
+@media (min-width: 640px) { .card__body { padding: 16px 18px 18px; } }
+.card__title { font-size: clamp(.98rem, 1.6vw, 1.12rem); line-height: 1.25; min-height: 2.5em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card__title button { text-align: left; line-height: inherit; transition: color .2s; }
+.card__title button:hover { color: var(--brand); }
+.card__desc { font-size: .84rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card__foot { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: auto; padding-top: .7rem; }
+.card .btn--sm { height: 38px; padding: 0 .9rem; }
+@media (max-width: 479px) {
+  .card .add-btn span { display: none; }
+  .card .add-btn { width: 38px; padding: 0; }
+  .card__desc { display: none; }
+}
+
+.origin {
+  display: flex; align-items: center; gap: .45rem; flex-wrap: wrap;
+  font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+}
+.flag { width: 20px; height: auto; aspect-ratio: 3 / 2; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .1); flex: none; }
+
+.price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .1rem .45rem; font-weight: 600; font-size: 1.02rem; }
+.price s { font-weight: 400; color: var(--muted); font-size: .82rem; }
+.price--sale { color: var(--brand); }
+
+.badges { position: absolute; top: 12px; left: 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; pointer-events: none; }
+.badge {
+  display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px;
+  font-size: .68rem; font-weight: 600; letter-spacing: .04em; color: #fff; background: #1F1D1A;
+}
+.badge--new { background: #5B6B3A; }
+.badge--limited { background: #8A5A2B; }
+.badge--sale { background: #B04A22; }
+
+.fav-btn {
+  position: absolute; top: 10px; right: 10px;
+  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(255, 255, 255, .82); color: #1F1D1A; backdrop-filter: blur(8px);
+  transition: transform .25s var(--ease), background-color .2s;
+}
+.fav-btn:hover { transform: scale(1.08); background: #fff; }
+.fav-btn .icon { width: 18px; height: 18px; }
+.fav-btn.is-on, .fav-toggle.is-on { color: #C2582F; }
+.fav-btn.is-on .icon, .fav-toggle.is-on .icon { fill: currentColor; animation: pop .4s var(--ease); }
+@keyframes pop { 0% { transform: scale(.6); } 60% { transform: scale(1.25); } 100% { transform: scale(1); } }
+
+/* ---------- Catálogo ---------- */
+.catalog { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.catalog__main { min-width: 0; }
+@media (min-width: 960px) { .catalog { grid-template-columns: 250px minmax(0, 1fr); gap: 40px; align-items: start; } }
+
+.filters { display: flex; flex-direction: column; gap: 26px; }
+.filters__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.filters__head h3 { font-size: 1.35rem; margin-right: auto; }
+.filters__close, .filters__apply { display: none; }
+.filter-group legend { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; padding: 0; }
+
+.check { display: flex; align-items: center; gap: 10px; padding: 7px 0; cursor: pointer; font-size: .92rem; }
+.check input { position: absolute; opacity: 0; pointer-events: none; }
+.check__box {
+  display: grid; place-items: center; width: 20px; height: 20px; flex: none;
+  border: 1.5px solid var(--line-strong); border-radius: 6px; color: transparent;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.check__box .icon { width: 14px; height: 14px; stroke-width: 3; }
+.check input:checked + .check__box { background: var(--text); border-color: var(--text); color: var(--bg); }
+.check input:focus-visible + .check__box { outline: 2px solid var(--brand); outline-offset: 2px; }
+.check:hover .check__box { border-color: var(--text); }
+.check__label { flex: 1; }
+.check__n { font-size: .78rem; color: var(--muted); }
+
+.range { display: block; }
+.range__label { display: block; font-size: .92rem; margin-bottom: 8px; }
+.range input { width: 100%; accent-color: var(--brand); }
+.range__scale { display: flex; justify-content: space-between; font-size: .75rem; color: var(--muted); }
+
+@media (min-width: 960px) {
+  .filters { position: sticky; top: 100px; }
+}
+@media (max-width: 959px) {
+  .filters {
+    position: fixed; z-index: 60; top: 0; bottom: 0; left: 0;
+    width: min(360px, 88vw); padding: 20px 20px 24px; overflow-y: auto;
+    background: var(--bg); transform: translateX(-102%);
+    transition: transform .4s var(--ease);
+  }
+  .filters.is-open { transform: none; box-shadow: var(--shadow-lg); }
+  .filters__close { display: inline-grid; }
+  .filters__apply { display: inline-flex; margin-top: auto; }
+}
+
+.toolbar { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.toolbar__filters .icon { width: 17px; height: 17px; }
+@media (min-width: 960px) { .toolbar__filters { display: none; } }
+.toolbar__count { font-size: .9rem; color: var(--muted); margin-right: auto; }
+.select { position: relative; display: inline-flex; align-items: center; min-width: 0; }
+@media (max-width: 479px) { .toolbar__count { display: none; } .select { margin-left: auto; } .select select { max-width: 190px; } }
+.select select {
+  appearance: none; -webkit-appearance: none;
+  height: 40px; padding: 0 38px 0 16px; border-radius: 999px;
+  border: 1px solid var(--line-strong); background: var(--surface); font-size: .87rem; cursor: pointer;
+}
+.select .icon { position: absolute; right: 14px; width: 16px; height: 16px; pointer-events: none; color: var(--muted); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.chips:empty { display: none; }
+.chip {
+  display: inline-flex; align-items: center; gap: .4rem; height: 32px; padding: 0 10px 0 12px;
+  border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); font-size: .82rem;
+  transition: border-color .2s;
+}
+.chip:hover { border-color: var(--text); }
+.chip .icon { width: 14px; height: 14px; }
+.chip .flag { width: 16px; }
+.chip--clear { background: none; border-color: transparent; text-decoration: underline; text-underline-offset: 3px; color: var(--muted); }
+
+.empty { text-align: center; padding: 64px 16px; border: 1px dashed var(--line-strong); border-radius: var(--radius); }
+.empty__emoji { display: block; font-family: var(--emoji); font-size: 2.6rem; margin-bottom: 10px; }
+.empty h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.empty p { color: var(--muted); margin-bottom: 18px; }
+
+/* ---------- Historia ---------- */
+.story { display: grid; gap: 48px; align-items: center; }
+@media (min-width: 900px) { .story { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.story h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); margin-bottom: 1.2rem; }
+.story__art {
+  border-radius: var(--radius-lg); padding: clamp(16px, 4vw, 40px);
+  background:
+    radial-gradient(70% 60% at 20% 15%, rgba(255, 255, 255, .5), transparent 60%),
+    linear-gradient(150deg, #EBD5C2, #CF9C79);
+  filter: var(--tile-filter);
+}
+.orbit { position: relative; aspect-ratio: 1; max-width: 480px; margin-inline: auto; container-type: inline-size; }
+.orbit__ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 80s linear infinite; }
+.orbit__ring circle { fill: none; stroke: rgba(31, 29, 26, .35); stroke-width: 1.2; stroke-dasharray: 3 8; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.orbit__center {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: grid; place-items: center; gap: 6px; text-align: center;
+  width: 38cqw; aspect-ratio: 1; border-radius: 50%;
+  background: #FAF7F2; color: #1F1D1A; box-shadow: 0 20px 50px -20px rgba(60, 30, 10, .5);
+  align-content: center;
+}
+.orbit__center .logo { font-size: clamp(1rem, 5.5cqw, 1.6rem); }
+.orbit__center small { font-size: clamp(.62rem, 2.6cqw, .78rem); color: #6B655C; }
+.orbit__item {
+  position: absolute; left: 50%; top: 50%;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px 6px 6px; border-radius: 999px;
+  background: #FAF7F2; color: #1F1D1A; font-size: clamp(.62rem, 2.7cqw, .82rem); font-weight: 500; white-space: nowrap;
+  box-shadow: 0 10px 24px -12px rgba(60, 30, 10, .55);
+  transform: translate(-50%, -50%) rotate(var(--a)) translateX(37.5cqw) rotate(calc(var(--a) * -1));
+  transition: box-shadow .3s;
+}
+.orbit__item:hover { box-shadow: 0 0 0 2px #C2582F, 0 10px 24px -12px rgba(60, 30, 10, .55); }
+.orbit__item .flag { width: clamp(16px, 5cqw, 22px); }
+.steps { display: grid; gap: 20px; margin-top: 2rem; }
+.steps li { display: flex; gap: 18px; padding-top: 20px; border-top: 1px solid var(--line-strong); }
+.steps__n { font-family: var(--serif); font-size: 1.1rem; color: var(--brand); min-width: 2ch; }
+.steps strong { display: block; font-weight: 600; margin-bottom: 2px; }
+.steps p { color: var(--muted); font-size: .92rem; }
+
+/* ---------- Opiniones ---------- */
+.reviews { display: grid; gap: 16px; }
+@media (min-width: 860px) { .reviews { grid-template-columns: repeat(3, 1fr); gap: 22px; } }
+.review { margin: 0; display: flex; flex-direction: column; gap: 18px; padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.review__stars { display: flex; gap: 2px; color: var(--brand); }
+.review__stars .icon { width: 16px; height: 16px; }
+.review blockquote { margin: 0; font-family: var(--serif); font-size: 1.12rem; line-height: 1.5; flex: 1; }
+.review figcaption { display: flex; align-items: center; gap: 12px; }
+.review figcaption strong { display: block; font-size: .92rem; font-weight: 600; }
+.review figcaption small { color: var(--muted); font-size: .8rem; }
+.avatar { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--c); color: #1F1D1A; font-weight: 600; font-size: .8rem; }
+
+/* ---------- Boletín ---------- */
+.newsletter {
+  position: relative; overflow: hidden;
+  display: grid; gap: 28px; align-items: center;
+  padding: clamp(28px, 5vw, 64px); border-radius: var(--radius-lg);
+  background: var(--dark-block); color: var(--dark-block-ink);
+}
+.newsletter::after {
+  content: ""; position: absolute; right: -120px; top: -120px; width: 360px; height: 360px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(226, 128, 90, .35), transparent);
+  pointer-events: none;
+}
+@media (min-width: 900px) { .newsletter { grid-template-columns: 1.1fr 1fr; gap: 56px; } }
+.newsletter h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin-bottom: .8rem; }
+.newsletter__copy p:not(.eyebrow) { opacity: .75; }
+.newsletter__form-wrap { position: relative; z-index: 1; }
+.newsletter__form {
+  display: flex; align-items: center; gap: 8px; padding: 6px 6px 6px 18px;
+  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .16); border-radius: 999px;
+}
+.newsletter__form:focus-within { border-color: #F2A47F; }
+.newsletter__form .icon { width: 18px; height: 18px; opacity: .6; }
+.newsletter__form input { flex: 1; min-width: 0; border: 0; background: none; outline: none; color: inherit; font-size: .95rem; }
+.newsletter__form input::placeholder { color: inherit; opacity: .55; }
+.newsletter__form .btn--primary { background: #E2805A; color: #1A1612; }
+.newsletter__form .btn--primary:hover { background: #EC9472; }
+.newsletter__note { font-size: .78rem; opacity: .55; margin-top: 12px; padding-left: 18px; }
+.newsletter__form.is-error { border-color: #F2A47F; animation: shake .4s; }
+@keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.nl-success { display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-radius: var(--radius); background: rgba(255, 255, 255, .08); }
+.nl-success .icon { color: #A3B57A; width: 24px; height: 24px; }
+@media (max-width: 480px) {
+  .newsletter__form { flex-wrap: wrap; border-radius: 20px; padding: 10px; }
+  .newsletter__form .icon { display: none; }
+  .newsletter__form input { padding: 8px; }
+  .newsletter__form .btn { width: 100%; }
+}
+
+/* ---------- Pie ---------- */
+.footer { border-top: 1px solid var(--line); padding-top: clamp(48px, 7vw, 80px); font-size: .9rem; }
+.footer__grid { display: grid; gap: 36px; grid-template-columns: repeat(2, 1fr); }
+.footer__brand { grid-column: 1 / -1; }
+@media (min-width: 900px) { .footer__grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; } .footer__brand { grid-column: auto; } }
+.footer__brand p { color: var(--muted); max-width: 36ch; margin: 14px 0 20px; }
+.footer h4 { font-family: var(--sans); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.footer ul { display: grid; gap: 10px; }
+.footer ul a { display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
+.footer ul a:hover { color: var(--brand); }
+.social { display: flex; gap: 8px; }
+.social a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line-strong); transition: background-color .2s, color .2s, border-color .2s; }
+.social a:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+.social .icon { width: 18px; height: 18px; }
+.footer__bottom {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  margin-top: 48px; padding-block: 24px 96px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem;
+}
+@media (min-width: 900px) { .footer__bottom { padding-bottom: 28px; } }
+.payments { display: flex !important; flex-wrap: wrap; gap: 6px !important; }
+.payments li { padding: 4px 10px; border: 1px solid var(--line-strong); border-radius: 6px; font-size: .72rem; font-weight: 600; color: var(--text); }
+.footer__legal { display: flex; gap: 16px; }
+.footer__legal a:hover { color: var(--brand); }
+
+/* ---------- Capas: fondo, cajones, modal ---------- */
+.backdrop {
+  position: fixed; inset: 0; z-index: 55;
+  background: rgba(20, 18, 15, .45); backdrop-filter: blur(3px);
+  opacity: 0; pointer-events: none; transition: opacity .35s;
+}
+.backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: fixed; top: 0; right: 0; z-index: 60;
+  display: flex; flex-direction: column;
+  width: min(420px, 100%); height: 100%; height: 100dvh;
+  background: var(--bg);
+  transform: translateX(102%); transition: transform .45s var(--ease);
+}
+.drawer.is-open { transform: none; box-shadow: var(--shadow-lg); }
+.drawer--left { left: 0; right: auto; width: min(340px, 88vw); transform: translateX(-102%); }
+.drawer__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 16px 16px 22px; border-bottom: 1px solid var(--line); }
+.drawer__head h2 { font-size: 1.45rem; }
+.drawer__count { font-family: var(--sans); font-size: .85rem; color: var(--muted); }
+.drawer__body { flex: 1; overflow-y: auto; padding: 4px 22px; }
+.drawer__foot { padding: 18px 22px 22px; border-top: 1px solid var(--line); background: var(--surface); }
+
+.mobile-nav { display: grid; padding: 12px 22px; }
+.mobile-nav a { font-family: var(--serif); font-size: 1.6rem; padding: 12px 0; border-bottom: 1px solid var(--line); transition: color .2s, padding .3s var(--ease); }
+.mobile-nav a:hover { color: var(--brand); padding-left: 6px; }
+.mobile-nav__foot { margin-top: auto; padding: 22px; display: grid; gap: 10px; font-size: .85rem; color: var(--muted); }
+.mobile-nav__foot p { display: flex; align-items: center; gap: 10px; }
+.mobile-nav__foot .icon { width: 18px; height: 18px; color: var(--brand); }
+
+.ship { padding: 14px 22px; background: var(--surface-2); font-size: .86rem; }
+.ship:empty { display: none; }
+.ship__bar { height: 6px; margin-top: 9px; border-radius: 99px; background: var(--line-strong); overflow: hidden; }
+.ship__bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--olive), var(--brand)); transition: width .6s var(--ease); }
+
+.line { display: grid; grid-template-columns: 72px 1fr auto; gap: 14px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.line__media { width: 72px; aspect-ratio: 4 / 5; border-radius: 12px; overflow: hidden; }
+.line__name { font-family: var(--serif); font-size: 1rem; line-height: 1.25; text-align: left; display: block; margin: 3px 0 8px; }
+.line__name:hover { color: var(--brand); }
+.line .origin { font-size: .64rem; }
+.line .flag { width: 16px; }
+.line__right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.line__price { font-weight: 600; font-size: .95rem; }
+.line__remove { color: var(--muted); width: 32px; height: 32px; }
+.line__remove .icon { width: 16px; height: 16px; }
+.line__remove:hover { color: var(--brand); }
+
+.stepper { display: inline-flex; align-items: center; height: 34px; border: 1px solid var(--line-strong); border-radius: 999px; }
+.stepper button { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; transition: background-color .2s; }
+.stepper button:hover { background: var(--surface-2); }
+.stepper button:disabled { opacity: .35; cursor: default; background: none; }
+.stepper .icon { width: 14px; height: 14px; }
+.stepper span { min-width: 22px; text-align: center; font-size: .9rem; font-weight: 500; }
+.stepper--lg { height: 50px; padding: 0 4px; }
+.stepper--lg button { width: 40px; height: 40px; }
+
+.sum-row { display: flex; justify-content: space-between; font-size: .9rem; color: var(--muted); margin-bottom: 6px; }
+.sum-row--total { color: var(--text); font-size: 1.1rem; font-weight: 600; margin: 12px 0 16px; }
+.drawer__note { text-align: center; font-size: .75rem; color: var(--muted); margin-top: 10px; display: flex; justify-content: center; align-items: center; gap: 6px; }
+.drawer__note .icon { width: 14px; height: 14px; }
+
+.drawer-empty { display: grid; justify-items: center; text-align: center; gap: 10px; padding: 64px 12px; }
+.drawer-empty__emoji { font-family: var(--emoji); font-size: 2.8rem; }
+.drawer-empty h3 { font-size: 1.35rem; }
+.drawer-empty p { color: var(--muted); font-size: .9rem; margin-bottom: 8px; }
+
+.modal {
+  position: fixed; inset: 0; z-index: 60;
+  display: flex; align-items: flex-end; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .3s;
+}
+.modal.is-open { opacity: 1; pointer-events: auto; }
+.modal__panel {
+  position: relative; width: 100%; max-height: 94dvh; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--bg); border-radius: 24px 24px 0 0; box-shadow: var(--shadow-lg);
+  transform: translateY(40px); transition: transform .45s var(--ease);
+}
+.modal.is-open .modal__panel { transform: none; }
+.modal__close { position: sticky; top: 12px; float: right; margin: 12px 12px 0 0; z-index: 3; background: var(--surface); box-shadow: var(--shadow); }
+@media (min-width: 860px) {
+  .modal { align-items: center; padding: 24px; }
+  .modal__panel { max-width: 1020px; max-height: 90vh; border-radius: var(--radius-lg); }
+}
+
+.pd { display: grid; gap: 24px; padding: 20px 16px 8px; clear: both; }
+@media (min-width: 640px) { .pd { padding: 8px 28px 8px; } }
+@media (min-width: 860px) { .pd { grid-template-columns: 1.05fr 1fr; gap: 44px; padding: 32px 40px 8px; clear: none; } }
+.pd__main { position: relative; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; }
+.pd__main .pv { animation: fadeIn .4s var(--ease); }
+@keyframes fadeIn { from { opacity: .3; } }
+.pd__thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.pd__thumb { aspect-ratio: 1; border-radius: 12px; overflow: hidden; outline: 2px solid transparent; outline-offset: 2px; transition: outline-color .2s, opacity .2s; opacity: .7; }
+.pd__thumb:hover { opacity: 1; }
+.pd__thumb.is-active { outline-color: var(--text); opacity: 1; }
+.pd__info { display: flex; flex-direction: column; gap: 14px; }
+.pd__info h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); }
+.rating { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); }
+.rating .stars { display: flex; gap: 1px; color: var(--brand); }
+.rating .icon { width: 15px; height: 15px; }
+.pd__price .price { font-size: 1.6rem; font-family: var(--serif); font-weight: 500; }
+.pd__price .price s { font-family: var(--sans); font-size: 1rem; }
+.pd__text { color: var(--muted); }
+.pd__specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0; }
+.pd__specs div { padding: 12px; border-radius: 12px; background: var(--surface-2); }
+.pd__specs dt { font-size: .66rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.pd__specs dd { margin: 3px 0 0; font-size: .86rem; font-weight: 500; line-height: 1.35; }
+.pd__buy { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.pd__add { flex: 1; min-width: 180px; }
+.pd__perks { display: grid; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+.pd__perks li { display: flex; align-items: center; gap: 10px; }
+.pd__perks .icon { width: 17px; height: 17px; color: var(--olive); }
+.pd__related { padding: 28px 16px 28px; }
+@media (min-width: 640px) { .pd__related { padding: 32px 28px; } }
+@media (min-width: 860px) { .pd__related { padding: 36px 40px 40px; } }
+.pd__related h3 { font-size: 1.4rem; margin-bottom: 16px; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 640px) { .mini-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.mini { display: flex; flex-direction: column; gap: 4px; text-align: left; min-width: 0; }
+.mini__media { aspect-ratio: 1; border-radius: 14px; overflow: hidden; margin-bottom: 6px; }
+.mini:hover .pv__emoji { transform: scale(1.08); }
+.mini__name { font-size: .88rem; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini__price { font-size: .85rem; font-weight: 600; }
+
+/* ---------- Avisos y botón de WhatsApp ---------- */
+.toast {
+  position: fixed; left: 50%; bottom: 88px; z-index: 80;
+  display: flex; align-items: center; gap: 14px;
+  max-width: calc(100% - 32px); padding: 12px 18px; border-radius: 999px;
+  background: var(--text); color: var(--bg); font-size: .88rem; box-shadow: var(--shadow-lg);
+  opacity: 0; transform: translate(-50%, 16px); pointer-events: none;
+  transition: opacity .3s, transform .4s var(--ease);
+}
+.toast.is-show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.toast button { color: var(--toast-link); font-weight: 600; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 900px) { .toast { bottom: 28px; } }
+
+.wa-fab {
+  position: fixed; right: 16px; bottom: 16px; z-index: 50;
+  display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 16px;
+  border-radius: 999px; background: #25D366; color: #fff;
+  box-shadow: 0 14px 30px -10px rgba(37, 211, 102, .6);
+  transition: transform .3s var(--ease), box-shadow .3s;
+}
+.wa-fab:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -10px rgba(37, 211, 102, .7); }
+.wa-fab .icon { width: 24px; height: 24px; }
+.wa-fab__label { font-size: .88rem; font-weight: 600; color: #fff; }
+@media (max-width: 639px) { .wa-fab { width: 56px; padding: 0; justify-content: center; } .wa-fab__label { display: none; } }
+@media (min-width: 640px) { .wa-fab { right: 24px; bottom: 24px; } }
+
+/* ---------- Animación al hacer scroll ---------- */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+</style>
+  <script>
+    // Aplica el tema guardado antes de pintar, para evitar parpadeos.
+    document.documentElement.classList.add('js');
+    try { var t = JSON.parse(localStorage.getItem('origen-theme')); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- 1. Barra de anuncios -->
+  <div class="announce">
+    <p>
+      <i data-icon="truck"></i>
+      <span><strong>Envío gratis</strong> en pedidos superiores a $60</span>
+      <span class="announce__extra" aria-hidden="true">·</span>
+      <span class="announce__extra">Productos 100 % auténticos</span>
+    </p>
+  </div>
+
+  <!-- 2. Encabezado -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <button class="icon-btn header__menu" type="button" data-action="open-menu" aria-label="Abrir menú"><i data-icon="menu"></i></button>
+      <a class="logo" href="#inicio" aria-label="ORIGEN, ir al inicio">ORIGEN<span class="logo__dot">.</span></a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#paises">Países</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#catalogo" data-action="novedades">Novedades</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+
+      <div class="header__actions">
+        <form class="search" id="searchForm" role="search">
+          <i data-icon="search"></i>
+          <label class="sr-only" for="searchInput">Buscar productos</label>
+          <input id="searchInput" type="search" placeholder="Buscar productos o países…" autocomplete="off">
+        </form>
+        <button class="icon-btn search-toggle" type="button" data-action="toggle-search" aria-label="Buscar"><i data-icon="search"></i></button>
+        <button class="icon-btn" type="button" id="themeBtn" data-action="toggle-theme" aria-label="Cambiar tema"><i data-icon="moon"></i></button>
+        <button class="icon-btn" type="button" data-action="open-favs" aria-label="Favoritos">
+          <i data-icon="heart"></i><span class="count" id="favCount" hidden>0</span>
+        </button>
+        <button class="icon-btn" type="button" data-action="open-cart" aria-label="Carrito">
+          <i data-icon="bag"></i><span class="count" id="cartCount" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 3. Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="eyebrow"><i data-icon="globe"></i> Importación directa desde el origen</p>
+          <h1>El mundo,<br><em>en tu casa.</em></h1>
+          <p class="lead">Seleccionamos en cada país lo que sus propios habitantes más aprecian: sabores, piezas artesanas y rituales de cuidado, auténticos y con historia.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#catalogo">Explorar productos <i data-icon="arrow" class="icon--arrow"></i></a>
+            <a class="btn btn--ghost" href="#paises">Comprar por país</a>
+          </div>
+          <dl class="hero__stats">
+            <div><dt id="statProducts">18</dt><dd>productos únicos</dd></div>
+            <div><dt id="statCountries">6</dt><dd>países de origen</dd></div>
+            <div><dt>4.9<span class="star-inline">★</span></dt><dd>valoración media</dd></div>
+          </dl>
+        </div>
+        <div class="hero__art reveal" id="heroArt" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- 4. Franja de confianza -->
+    <section class="trust" aria-label="Por qué comprar en ORIGEN">
+      <div class="container trust__grid">
+        <div class="trust__item"><span class="trust__icon"><i data-icon="plane"></i></span><div><strong>Importación directa</strong><span>Sin intermediarios</span></div></div>
+        <div class="trust__item"><span class="trust__icon"><i data-icon="truck"></i></span><div><strong>Envío seguro</strong><span>Gratis desde $60</span></div></div>
+        <div class="trust__item"><span class="trust__icon"><i data-icon="lock"></i></span><div><strong>Pago protegido</strong><span>Cifrado de extremo a extremo</span></div></div>
+        <div class="trust__item"><span class="trust__icon"><i data-icon="rotate"></i></span><div><strong>Devoluciones</strong><span>30 días sin preguntas</span></div></div>
+      </div>
+    </section>
+
+    <!-- 5. Comprar por país -->
+    <section class="section" id="paises">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Comprar por país</p>
+            <h2>Un viaje en cada pedido</h2>
+          </div>
+          <p class="section-head__text">Elige un destino y descubre lo mejor de su tradición, seleccionado por nuestro equipo en origen.</p>
+        </div>
+        <div class="countries" id="countryGrid"></div>
+      </div>
+    </section>
+
+    <!-- 6. Categorías -->
+    <section class="section section--tint" id="categorias">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Categorías</p>
+            <h2>¿Qué te apetece descubrir?</h2>
+          </div>
+        </div>
+        <div class="cats" id="categoryGrid"></div>
+      </div>
+    </section>
+
+    <!-- 7. Más vendidos -->
+    <section class="section" id="destacados">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Más vendidos</p>
+            <h2>Los favoritos de nuestros clientes</h2>
+          </div>
+          <a class="link-arrow" href="#catalogo">Ver todo el catálogo <i data-icon="arrow"></i></a>
+        </div>
+        <div class="grid grid--4" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <!-- 8. Catálogo completo -->
+    <section class="section section--line" id="catalogo">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Catálogo</p>
+            <h2>Todos los productos</h2>
+          </div>
+        </div>
+
+        <div class="catalog">
+          <aside class="filters" id="filters" aria-label="Filtros del catálogo">
+            <div class="filters__head">
+              <h3>Filtros</h3>
+              <button class="text-btn" type="button" data-action="clear-filters">Limpiar</button>
+              <button class="icon-btn filters__close" type="button" data-action="close" aria-label="Cerrar filtros"><i data-icon="x"></i></button>
+            </div>
+            <fieldset class="filter-group">
+              <legend>País de origen</legend>
+              <div id="filterCountries"></div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend>Categoría</legend>
+              <div id="filterCategories"></div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend>Precio</legend>
+              <label class="range">
+                <span class="range__label">Hasta <strong id="priceLabel">$90</strong></span>
+                <input type="range" id="priceRange" min="10" max="90" step="5" value="90" aria-label="Precio máximo">
+                <span class="range__scale"><span>$10</span><span>$90</span></span>
+              </label>
+            </fieldset>
+            <button class="btn btn--primary btn--block filters__apply" type="button" data-action="close" id="applyFilters">Ver productos</button>
+          </aside>
+
+          <div class="catalog__main">
+            <div class="toolbar">
+              <button class="btn btn--ghost btn--sm toolbar__filters" type="button" data-action="open-filters"><i data-icon="sliders"></i> Filtros</button>
+              <p class="toolbar__count" id="resultCount" aria-live="polite"></p>
+              <label class="select">
+                <span class="sr-only">Ordenar por</span>
+                <select id="sortSelect">
+                  <option value="popular">Más populares</option>
+                  <option value="new">Novedades</option>
+                  <option value="price-asc">Precio: menor a mayor</option>
+                  <option value="price-desc">Precio: mayor a menor</option>
+                </select>
+                <i data-icon="chevron"></i>
+              </label>
+            </div>
+            <div class="chips" id="activeChips"></div>
+            <div class="grid grid--catalog" id="productGrid"></div>
+            <div class="empty" id="emptyState" hidden>
+              <span class="empty__emoji" aria-hidden="true">🧭</span>
+              <h3>No encontramos productos</h3>
+              <p>Prueba con otros filtros o explora otro país.</p>
+              <button class="btn btn--ghost btn--sm" type="button" data-action="clear-filters">Limpiar filtros</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Historia de origen -->
+    <section class="section section--tint" id="nosotros">
+      <div class="container story">
+        <div class="story__art reveal" aria-hidden="true">
+          <div class="orbit">
+            <svg class="orbit__ring" viewBox="0 0 400 400"><circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="96"/></svg>
+            <div class="orbit__center">
+              <span class="logo">ORIGEN<span class="logo__dot">.</span></span>
+              <small id="orbitCaption">6 países · 18 productos</small>
+            </div>
+            <div id="orbitFlags"></div>
+          </div>
+        </div>
+        <div class="story__copy reveal">
+          <p class="eyebrow">Nuestra historia</p>
+          <h2>Cada producto tiene un lugar de origen</h2>
+          <p class="lead">No compramos en grandes almacenes de exportación. Viajamos, probamos y conocemos a quienes hacen cada pieza, para traerte solo lo que de verdad merece cruzar el océano.</p>
+          <ol class="steps">
+            <li><span class="steps__n">01</span><div><strong>Viajamos al origen</strong><p>Visitamos mercados, talleres y cooperativas de cada país.</p></div></li>
+            <li><span class="steps__n">02</span><div><strong>Compramos directo</strong><p>Pagamos un precio justo a productores y artesanos locales.</p></div></li>
+            <li><span class="steps__n">03</span><div><strong>Lo traemos a tu puerta</strong><p>Importación cuidada, embalaje seguro y entrega en 48–72 h.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Opiniones -->
+    <section class="section" id="opiniones">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <div>
+            <p class="eyebrow">Opiniones</p>
+            <h2>Lo que dicen quienes ya viajaron con nosotros</h2>
+          </div>
+        </div>
+        <div class="reviews">
+          <figure class="review reveal">
+            <div class="review__stars" data-stars="5" aria-label="5 de 5 estrellas"></div>
+            <blockquote>“El matcha es otro nivel, nada que ver con el del supermercado. Llegó en dos días y con una nota escrita a mano.”</blockquote>
+            <figcaption><span class="avatar" style="--c:#9DB47C">LF</span><span><strong>Lucía Fernández</strong><small>Bogotá</small></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <div class="review__stars" data-stars="5" aria-label="5 de 5 estrellas"></div>
+            <blockquote>“Compré la lámpara marroquí para el salón y por la noche proyecta unas sombras preciosas. Todos preguntan de dónde es.”</blockquote>
+            <figcaption><span class="avatar" style="--c:#DCA372">MR</span><span><strong>Martín Rojas</strong><small>Santiago</small></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <div class="review__stars" data-stars="5" aria-label="5 de 5 estrellas"></div>
+            <blockquote>“Mi regalo favorito: la manta de alpaca. Se nota la calidad del tejido y el embalaje fue impecable.”</blockquote>
+            <figcaption><span class="avatar" style="--c:#C8A07B">CT</span><span><strong>Camila Torres</strong><small>Madrid</small></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Boletín -->
+    <section class="section section--tight" id="boletin">
+      <div class="container">
+        <div class="newsletter reveal">
+          <div class="newsletter__copy">
+            <p class="eyebrow eyebrow--light">Boletín</p>
+            <h2>Recibe un 10 % de descuento en tu primera compra</h2>
+            <p>Nuevas llegadas, historias de origen y ofertas exclusivas. Un correo al mes, sin spam.</p>
+          </div>
+          <div class="newsletter__form-wrap" id="newsletterWrap">
+            <form class="newsletter__form" id="newsletterForm" novalidate>
+              <label class="sr-only" for="nlEmail">Correo electrónico</label>
+              <i data-icon="mail"></i>
+              <input id="nlEmail" type="email" placeholder="tu@correo.com" required autocomplete="email">
+              <button class="btn btn--primary" type="submit">Suscribirme</button>
+            </form>
+            <p class="newsletter__note">Al suscribirte aceptas nuestra política de privacidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. Pie de página -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="#inicio">ORIGEN<span class="logo__dot">.</span></a>
+          <p>Productos auténticos importados directamente desde su lugar de origen. Lo mejor de cada país, en la puerta de tu casa.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram"><i data-icon="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i data-icon="facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i data-icon="tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Tienda</h4>
+          <ul id="footerCountries"></ul>
+        </div>
+        <div>
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Envíos y entregas</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@origen.shop">hola@origen.shop</a></li>
+            <li><span>Lunes a viernes, 9:00–18:00</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 ORIGEN. Todos los derechos reservados.</p>
+        <ul class="payments" aria-label="Métodos de pago">
+          <li>Visa</li><li>Mastercard</li><li>PayPal</li><li>Transferencia</li>
+        </ul>
+        <nav class="footer__legal" aria-label="Legal">
+          <a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Capas: menú, carrito, favoritos y ficha de producto -->
+  <div class="backdrop" id="backdrop" data-action="close"></div>
+
+  <aside class="drawer drawer--left" id="menuDrawer" aria-label="Menú" data-inert inert>
+    <div class="drawer__head">
+      <span class="logo">ORIGEN<span class="logo__dot">.</span></span>
+      <button class="icon-btn" type="button" data-action="close" aria-label="Cerrar menú"><i data-icon="x"></i></button>
+    </div>
+    <nav class="mobile-nav" aria-label="Menú móvil">
+      <a href="#inicio" data-action="close">Inicio</a>
+      <a href="#paises" data-action="close">Países</a>
+      <a href="#categorias" data-action="close">Categorías</a>
+      <a href="#catalogo" data-action="novedades">Novedades</a>
+      <a href="#nosotros" data-action="close">Nosotros</a>
+    </nav>
+    <div class="mobile-nav__foot">
+      <p><i data-icon="truck"></i> Envío gratis desde $60</p>
+      <p><i data-icon="rotate"></i> Devoluciones en 30 días</p>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Carrito de compra" data-inert inert>
+    <div class="drawer__head">
+      <h2>Tu carrito <span class="drawer__count" id="cartHeadCount"></span></h2>
+      <button class="icon-btn" type="button" data-action="close" aria-label="Cerrar carrito"><i data-icon="x"></i></button>
+    </div>
+    <div class="ship" id="shipProgress"></div>
+    <div class="drawer__body" id="cartItems"></div>
+    <div class="drawer__foot" id="cartFoot"></div>
+  </aside>
+
+  <aside class="drawer" id="favDrawer" aria-label="Favoritos" data-inert inert>
+    <div class="drawer__head">
+      <h2>Favoritos <span class="drawer__count" id="favHeadCount"></span></h2>
+      <button class="icon-btn" type="button" data-action="close" aria-label="Cerrar favoritos"><i data-icon="x"></i></button>
+    </div>
+    <div class="drawer__body" id="favItems"></div>
+  </aside>
+
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" data-inert inert>
+    <div class="modal__panel">
+      <button class="icon-btn modal__close" type="button" data-action="close" aria-label="Cerrar ficha"><i data-icon="x"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <a class="wa-fab" id="waFab" href="#" aria-label="Escríbenos por WhatsApp">
+    <i data-icon="chat"></i>
+    <span class="wa-fab__label">¿Te ayudamos?</span>
+  </a>
+
+  <script>
+'use strict';
+
+/* =========================================================
+   ORIGEN — Lógica de la tienda
+   Para cambiar productos o países edita solo CONFIG,
+   COUNTRIES, CATEGORIES y PRODUCTS. El resto se genera solo.
+   ========================================================= */
+
+const CONFIG = {
+  freeShipping: 60,
+  // Tu número de WhatsApp con código de país, sin "+" ni espacios. Ej.: '573001234567'
+  whatsapp: '',
+  whatsappText: 'Hola ORIGEN, tengo una consulta sobre un producto.',
+};
+
+const COUNTRIES = {
+  jp: { name: 'Japón', tagline: 'Calma, precisión y tradición', colors: ['#F4E6DF', '#E3B7A6'] },
+  it: { name: 'Italia', tagline: 'Sabor y oficio artesano', colors: ['#EEF0DC', '#C2CB98'] },
+  ma: { name: 'Marruecos', tagline: 'Especias, luz y latón', colors: ['#F6E2CC', '#DCA372'] },
+  kr: { name: 'Corea del Sur', tagline: 'Rituales de cuidado y fermentos', colors: ['#E6EAF1', '#B5C1D5'] },
+  pe: { name: 'Perú', tagline: 'Altura, cacao y alpaca', colors: ['#F2E5D6', '#C8A07B'] },
+  tr: { name: 'Turquía', tagline: 'La hospitalidad del Bósforo', colors: ['#F4E0DE', '#D89C97'] },
+};
+
+const CATEGORIES = [
+  { id: 'Gourmet', emoji: '🫒', text: 'Despensa de autor' },
+  { id: 'Bebidas', emoji: '🍵', text: 'Tés y cafés de origen' },
+  { id: 'Hogar y decoración', emoji: '🪔', text: 'Piezas con historia' },
+  { id: 'Artesanía', emoji: '🥢', text: 'Hecho a mano' },
+  { id: 'Cuidado personal', emoji: '🧴', text: 'Rituales del mundo' },
+];
+
+/* badge: 'best' (Más vendido) · 'new' (Nuevo) · 'limited' (Edición limitada)
+   old: precio anterior (si tiene descuento)
+   img: (opcional) ruta a una foto real, p. ej. 'img/matcha.jpg'. Si no hay, se usa el visual ilustrado. */
+const PRODUCTS = [
+  { id: 'matcha', name: 'Té matcha ceremonial de Uji', size: '30 g', country: 'jp', region: 'Uji, Kioto', category: 'Bebidas', price: 24.90, badge: 'best', pop: 98, rating: 4.9, reviews: 214, added: '2026-03-02', emoji: '🍵', colors: ['#E4EBD3', '#9DB47C'],
+    desc: 'Molido en piedra, de primera cosecha.', long: 'Hojas tencha de primera cosecha, cultivadas a la sombra y molidas lentamente en piedra de granito. Un verde intenso, textura sedosa y un dulzor natural sin amargor, ideal para preparar al estilo tradicional o en latte.' },
+  { id: 'mino', name: 'Juego de cuencos de cerámica Mino', size: '4 piezas', country: 'jp', region: 'Gifu', category: 'Hogar y decoración', price: 48.00, pop: 70, rating: 4.8, reviews: 63, added: '2026-02-10', emoji: '🥣', colors: ['#EFE8DD', '#CDBFA8'],
+    desc: 'Gres esmaltado a mano en Gifu.', long: 'Cuatro cuencos de gres esmaltados a mano por un taller familiar de la región de Mino, con más de 1.300 años de tradición cerámica. Cada pieza tiene pequeñas variaciones que la hacen única. Aptos para lavavajillas.' },
+  { id: 'palillos', name: 'Palillos lacados artesanales', size: 'Par + funda', country: 'jp', region: 'Wajima', category: 'Artesanía', price: 15.50, pop: 55, rating: 4.7, reviews: 41, added: '2026-01-20', emoji: '🥢', colors: ['#F2DCD3', '#C27A63'],
+    desc: 'Laca urushi sobre madera natural.', long: 'Palillos de madera natural recubiertos con varias capas de laca urushi, una técnica artesanal japonesa que los hace resistentes y agradables al tacto. Se entregan en una funda de tela lista para regalar.' },
+
+  { id: 'aceite', name: 'Aceite de oliva virgen extra de Toscana', size: '500 ml', country: 'it', region: 'Chianti, Toscana', category: 'Gourmet', price: 19.90, badge: 'best', pop: 95, rating: 4.9, reviews: 188, added: '2026-02-18', emoji: '🫒', colors: ['#ECEBCF', '#B4B46A'],
+    desc: 'Prensado en frío, cosecha temprana.', long: 'Aceite de cosecha temprana de olivos frantoio y moraiolo, prensado en frío en las 12 horas posteriores a la recolección. Notas de hierba recién cortada, alcachofa y un final ligeramente picante.' },
+  { id: 'pasta', name: 'Pasta artesanal de Gragnano', size: 'Pack de 3 × 500 g', country: 'it', region: 'Gragnano, Campania', category: 'Gourmet', price: 14.50, pop: 72, rating: 4.8, reviews: 97, added: '2026-01-28', emoji: '🍝', colors: ['#F5E8C8', '#DEBD76'],
+    desc: 'Trafilata al bronce, secado lento.', long: 'Pasta de sémola de trigo duro extruida con moldes de bronce y secada lentamente durante 48 horas. Su superficie rugosa atrapa la salsa como ninguna otra. Incluye paccheri, fusilloni y spaghettoni.' },
+  { id: 'cartera', name: 'Cartera de cuero florentino', size: '11 × 9 cm', country: 'it', region: 'Florencia', category: 'Artesanía', price: 72.00, old: 85.00, pop: 60, rating: 4.8, reviews: 52, added: '2026-01-05', emoji: '👛', colors: ['#EBD9C8', '#A8724C'],
+    desc: 'Piel curtida vegetal, cosida a mano.', long: 'Cartera de piel curtida con taninos vegetales y cosida a mano en un pequeño taller del barrio de Santa Croce. Con el uso desarrolla una pátina única. Seis ranuras para tarjetas y bolsillo para billetes.' },
+
+  { id: 'lampara', name: 'Lámpara de latón calado', size: 'Ø 22 cm', country: 'ma', region: 'Marrakech', category: 'Hogar y decoración', price: 65.00, old: 79.00, pop: 80, rating: 4.9, reviews: 76, added: '2026-02-01', emoji: '🪔', colors: ['#F3E1C2', '#C9973F'],
+    desc: 'Latón calado que proyecta estrellas de luz.', long: 'Lámpara colgante de latón martillado y calado a mano por artesanos de la medina de Marrakech. Al encenderla, proyecta un patrón de estrellas y arabescos en paredes y techo. Incluye cable y portalámparas.' },
+  { id: 'ras', name: 'Ras el hanout, mezcla de especias', size: '100 g', country: 'ma', region: 'Fez', category: 'Gourmet', price: 9.90, pop: 66, rating: 4.7, reviews: 58, added: '2026-01-14', emoji: '🌶️', colors: ['#F6DCC4', '#D07A3E'],
+    desc: 'Especias tostadas y molidas en Fez.', long: 'La mezcla insignia de la cocina marroquí: comino, cilantro, canela, jengibre, cúrcuma, pimienta y pétalos de rosa, tostados y molidos por un especiero de Fez. Perfecta para tajines, cuscús y verduras asadas.' },
+  { id: 'argan', name: 'Aceite de argán puro', size: '50 ml', country: 'ma', region: 'Essaouira', category: 'Cuidado personal', price: 22.00, badge: 'best', pop: 92, rating: 4.9, reviews: 165, added: '2026-02-22', emoji: '🧴', colors: ['#F5E7CF', '#D6B278'],
+    desc: 'Prensado por cooperativas de mujeres.', long: 'Aceite de argán 100 % puro y prensado en frío por cooperativas de mujeres de la región de Essaouira. Nutre la piel, el cabello y las uñas. Sin perfumes ni aditivos, en frasco de vidrio ámbar con cuentagotas.' },
+
+  { id: 'facial', name: 'Set de cuidado facial en 5 pasos', size: '5 productos', country: 'kr', region: 'Seúl', category: 'Cuidado personal', price: 38.00, badge: 'new', pop: 85, rating: 4.8, reviews: 89, added: '2026-10-20', emoji: '🫧', colors: ['#EEE6F0', '#C4B1D0'],
+    desc: 'Limpieza, tónico, sérum, crema y SPF.', long: 'La rutina coreana en formato viaje: limpiador suave, tónico hidratante, sérum con niacinamida, crema de centella asiática y protector solar SPF 50. Formulado para todo tipo de piel.' },
+  { id: 'kimchi', name: 'Kimchi tradicional en conserva', size: '400 g', country: 'kr', region: 'Jeonju', category: 'Gourmet', price: 11.90, pop: 58, rating: 4.6, reviews: 37, added: '2026-01-08', emoji: '🥬', colors: ['#F4DCD3', '#D9725A'],
+    desc: 'Fermentado según receta familiar.', long: 'Col napa fermentada con guindilla gochugaru, ajo, jengibre y cebolleta según una receta familiar de Jeonju. Picante, ácido y lleno de umami. Acompaña arroz, fideos o una simple tortilla.' },
+  { id: 'celadon', name: 'Tazas de té de celadón', size: 'Par', country: 'kr', region: 'Gangjin', category: 'Hogar y decoración', price: 34.00, pop: 50, rating: 4.8, reviews: 29, added: '2026-01-02', emoji: '🏺', colors: ['#E2EDE6', '#9DC1AE'],
+    desc: 'Esmalte verde jade cocido a alta temperatura.', long: 'Dos tazas de porcelana con el clásico esmalte celadón verde jade, una técnica coreana de más de mil años. Su craquelado fino aparece durante la cocción y hace que cada taza sea irrepetible.' },
+
+  { id: 'cafe', name: 'Café orgánico de altura de Cusco', size: '340 g', country: 'pe', region: 'Valle de La Convención, Cusco', category: 'Bebidas', price: 16.90, badge: 'new', pop: 78, rating: 4.8, reviews: 71, added: '2026-10-05', emoji: '☕', colors: ['#EADFD4', '#8F6A50'],
+    desc: 'Arábica cultivado a 1.800 m de altura.', long: 'Granos arábica de variedad típica y bourbon, cultivados bajo sombra a 1.800 metros y tostados en punto medio. En taza: chocolate, panela y un toque de mandarina. Disponible en grano entero.' },
+  { id: 'manta', name: 'Manta de alpaca tejida a mano', size: '130 × 180 cm', country: 'pe', region: 'Puno', category: 'Hogar y decoración', price: 89.00, badge: 'limited', pop: 75, rating: 5.0, reviews: 44, added: '2026-09-12', emoji: '🧣', colors: ['#F0E6DA', '#B99B7A'],
+    desc: 'Baby alpaca tejida en telar tradicional.', long: 'Manta de fibra de baby alpaca, tejida en telar de pedal por artesanas del altiplano. Ligera, muy cálida e hipoalergénica. Edición limitada de 40 unidades en tonos naturales sin teñir.' },
+  { id: 'chocolate', name: 'Chocolate de cacao chuncho 70 %', size: '80 g', country: 'pe', region: 'Quillabamba, Cusco', category: 'Gourmet', price: 8.50, pop: 82, rating: 4.9, reviews: 120, added: '2026-02-26', emoji: '🍫', colors: ['#EAD9CF', '#7E5040'],
+    desc: 'Cacao nativo de los valles de Cusco.', long: 'Tableta elaborada con cacao chuncho, una variedad nativa de los valles cálidos de Cusco. Sabor intenso con notas de frutos rojos y nueces, y solo dos ingredientes: cacao y azúcar de caña.' },
+
+  { id: 'lokum', name: 'Delicias turcas (lokum) surtidas', size: '250 g', country: 'tr', region: 'Estambul', category: 'Gourmet', price: 13.90, pop: 68, rating: 4.7, reviews: 66, added: '2026-01-30', emoji: '🍬', colors: ['#F6E0E4', '#E2A1AF'],
+    desc: 'Pistacho, rosa y granada.', long: 'Surtido de lokum elaborado en un obrador tradicional de Estambul: pistacho, agua de rosas, granada y avellana. Suaves, aromáticos y presentados en caja de regalo.' },
+  { id: 'toalla', name: 'Toalla hammam de algodón', size: '95 × 180 cm', country: 'tr', region: 'Denizli', category: 'Hogar y decoración', price: 27.00, badge: 'new', pop: 64, rating: 4.8, reviews: 33, added: '2026-10-28', emoji: '🛁', colors: ['#E3ECEF', '#9DBBC6'],
+    desc: 'Algodón turco tejido en telar.', long: 'Peshtemal de algodón turco tejido en telar en Denizli. Ligera, muy absorbente y de secado rápido: sirve como toalla de baño, de playa o como pareo. Se vuelve más suave con cada lavado.' },
+  { id: 'cezve', name: 'Cafetera cezve de cobre', size: '250 ml', country: 'tr', region: 'Gaziantep', category: 'Artesanía', price: 31.00, pop: 57, rating: 4.7, reviews: 24, added: '2026-01-11', emoji: '🫖', colors: ['#F1DDCB', '#B8743F'],
+    desc: 'Cobre martillado a mano.', long: 'Cezve de cobre martillado a mano con interior estañado y mango de latón, hecha por caldereros de Gaziantep. La forma tradicional de preparar café turco, con su espuma característica.' },
+];
+
+const MAX_PRICE = 90;
+
+/* ---------- Iconos (estilo lineal) ---------- */
+const ICONS = {
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
+  bag: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>',
+  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>',
+  moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+  globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+  truck: '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
+  shield: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+  rotate: '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>',
+  lock: '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  plane: '<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
+  star: '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  minus: '<path d="M5 12h14"/>',
+  trash: '<path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+  arrow: '<path d="M5 12h14M13 5l7 7-7 7"/>',
+  sliders: '<path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  chevron: '<path d="m6 9 6 6 6-6"/>',
+  mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/>',
+  chat: '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9 10.5c.5 1.6 1.9 3 3.5 3.5l1.2-1.2 2 .8v1.6c-3.8.4-7.6-3.4-7.2-7.2h1.6l.8 2Z"/>',
+  instagram: '<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/>',
+  facebook: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+  tiktok: '<path d="M9 12a4 4 0 1 0 4 4V2a5 5 0 0 0 5 5"/>',
+};
+
+function icon(name, cls = '') {
+  return `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ''}</svg>`;
+}
+
+/* ---------- Banderas en SVG (los emojis de bandera no se ven en Windows) ---------- */
+const trigram = (x, y, r) => `<g transform="translate(${x} ${y}) rotate(${r})"><rect x="-2" y="-1.35" width="4" height=".6"/><rect x="-2" y="-.3" width="4" height=".6"/><rect x="-2" y=".75" width="4" height=".6"/></g>`;
+const FLAGS = {
+  jp: '<rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#BC002D"/>',
+  it: '<rect width="10" height="20" fill="#009246"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE2B37"/>',
+  ma: '<rect width="30" height="20" fill="#C1272D"/><polygon points="15,5.5 17.65,13.64 10.72,8.61 19.28,8.61 12.35,13.64" fill="none" stroke="#006233" stroke-width=".9" stroke-linejoin="round"/>',
+  kr: '<rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="5" fill="#0047A0"/><path d="M10 10A5 5 0 0 1 20 10A2.5 2.5 0 0 1 15 10A2.5 2.5 0 0 0 10 10Z" fill="#CD2E3A"/><g fill="#111">' +
+      trigram(6.2, 4.2, -56.3) + trigram(23.8, 4.2, 56.3) + trigram(6.2, 15.8, 56.3) + trigram(23.8, 15.8, -56.3) + '</g>',
+  pe: '<rect width="10" height="20" fill="#D91023"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#D91023"/>',
+  tr: '<rect width="30" height="20" fill="#E30A17"/><circle cx="11.5" cy="10" r="5" fill="#fff"/><circle cx="12.75" cy="10" r="4" fill="#E30A17"/><polygon points="16.8,8 17.25,9.39 18.7,9.38 17.52,10.23 17.98,11.62 16.8,10.76 15.62,11.62 16.08,10.23 14.9,9.38 16.35,9.39" fill="#fff"/>',
+};
+function flag(code, cls = 'flag') {
+  return `<svg class="${cls}" viewBox="0 0 30 20" aria-hidden="true" focusable="false">${FLAGS[code] || ''}</svg>`;
+}
+
+/* ---------- Utilidades ---------- */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const byId = id => PRODUCTS.find(p => p.id === id);
+const fmt = n => '$' + n.toFixed(2);
+const fmt0 = n => '$' + Math.round(n);
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+const normalize = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const esc = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+const store = {
+  get(key, fallback) {
+    try { const v = localStorage.getItem('origen-' + key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; }
+  },
+  set(key, value) {
+    try { localStorage.setItem('origen-' + key, JSON.stringify(value)); } catch (e) { /* sin almacenamiento */ }
+  },
+};
+
+/* ---------- Estado ---------- */
+const savedCart = store.get('cart', {});
+const state = {
+  cart: Object.fromEntries(Object.entries(savedCart && typeof savedCart === 'object' ? savedCart : {}).filter(([id, q]) => byId(id) && q > 0)),
+  favs: new Set((store.get('favs', []) || []).filter(id => byId(id))),
+  filters: { countries: new Set(), categories: new Set(), max: MAX_PRICE, q: '', sort: 'popular' },
+};
+
+/* ---------- Piezas de interfaz ---------- */
+function visual(p, variant = 0, small = false) {
+  const c = COUNTRIES[p.country];
+  const cls = ['pv', small ? 'pv--sm' : '', variant ? `pv--v${variant}` : ''].join(' ');
+  const img = p.img && variant === 0 ? `<img src="${p.img}" alt="${esc(p.name)}" loading="lazy" onerror="this.remove()">` : '';
+  return `<div class="${cls}" style="--a:${p.colors[0]};--b:${p.colors[1]}" role="img" aria-label="${esc(p.name)}">
+    ${variant === 2 ? `<span class="pv__flag">${flag(p.country)}</span>` : ''}
+    <span class="pv__emoji" aria-hidden="true">${p.emoji}</span>
+    <span class="pv__mark" aria-hidden="true">${c.name}</span>${img}
+  </div>`;
+}
+
+function discount(p) { return p.old ? Math.round((1 - p.price / p.old) * 100) : 0; }
+
+function badgesHtml(p) {
+  const list = [];
+  if (p.badge === 'best') list.push('<span class="badge">Más vendido</span>');
+  if (p.badge === 'new') list.push('<span class="badge badge--new">Nuevo</span>');
+  if (p.badge === 'limited') list.push('<span class="badge badge--limited">Edición limitada</span>');
+  if (p.old) list.push(`<span class="badge badge--sale">−${discount(p)} %</span>`);
+  return list.length ? `<div class="badges">${list.join('')}</div>` : '';
+}
+
+function priceHtml(p) {
+  return `<span class="price ${p.old ? 'price--sale' : ''}">${fmt(p.price)}${p.old ? ` <s>${fmt(p.old)}</s>` : ''}</span>`;
+}
+
+function stars(rating) {
+  const full = Math.round(rating);
+  return `<span class="stars" aria-label="${rating} de 5">${Array.from({ length: 5 }, (_, i) => icon('star', i < full ? 'icon--fill' : '')).join('')}</span>`;
+}
+
+function favButton(p, cls = 'fav-btn') {
+  const on = state.favs.has(p.id);
+  return `<button class="${cls} ${on ? 'is-on' : ''}" type="button" data-fav="${p.id}" aria-pressed="${on}" aria-label="${on ? 'Quitar de' : 'Añadir a'} favoritos: ${esc(p.name)}">${icon('heart')}</button>`;
+}
+
+function productCard(p, i = 0) {
+  const c = COUNTRIES[p.country];
+  return `<article class="card" style="--i:${i}">
+    <div class="card__media">
+      <button class="card__open" type="button" data-open="${p.id}" aria-label="Ver ${esc(p.name)}">${visual(p)}</button>
+      ${badgesHtml(p)}
+      ${favButton(p)}
+    </div>
+    <div class="card__body">
+      <p class="origin">${flag(p.country)} ${c.name}</p>
+      <h3 class="card__title"><button type="button" data-open="${p.id}">${p.name}</button></h3>
+      <p class="card__desc">${p.desc}</p>
+      <div class="card__foot">
+        ${priceHtml(p)}
+        <button class="btn btn--dark btn--sm add-btn" type="button" data-add="${p.id}" aria-label="Añadir ${esc(p.name)} al carrito">${icon('bag')}<span>Añadir</span></button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function miniCard(p) {
+  return `<button class="mini" type="button" data-open="${p.id}">
+    <span class="mini__media">${visual(p, 0, true)}</span>
+    <span class="origin">${flag(p.country)} ${COUNTRIES[p.country].name}</span>
+    <span class="mini__name">${p.name}</span>
+    <span class="mini__price">${fmt(p.price)}</span>
+  </button>`;
+}
+
+/* ---------- Secciones ---------- */
+function renderHero() {
+  const ids = ['matcha', 'lampara', 'manta'];
+  const tiles = ids.map((id, i) => {
+    const p = byId(id);
+    return `<div class="hero__tile hero__tile--${i}">${visual(p)}<span class="tile-chip">${flag(p.country)} ${COUNTRIES[p.country].name}</span></div>`;
+  }).join('');
+  const newest = [...PRODUCTS].sort((a, b) => b.added.localeCompare(a.added))[0];
+  $('#heroArt').innerHTML = tiles + `
+    <div class="float-card float-card--a">
+      <div><span class="stars">${Array.from({ length: 5 }, () => icon('star', 'icon--fill')).join('')}</span><strong>+2.300 clientes felices</strong><small>Valoración media 4,9 / 5</small></div>
+    </div>
+    <div class="float-card float-card--b">
+      <span class="float-card__emoji">${newest.emoji}</span>
+      <div><small>Recién llegado de ${COUNTRIES[newest.country].name}</small><strong>${newest.name}</strong></div>
+    </div>`;
+  $('#statProducts').textContent = PRODUCTS.length;
+  $('#statCountries').textContent = Object.keys(COUNTRIES).length;
+}
+
+function renderCountries() {
+  $('#countryGrid').innerHTML = Object.entries(COUNTRIES).map(([code, c]) => {
+    const items = PRODUCTS.filter(p => p.country === code);
+    return `<a class="country reveal" href="#catalogo" data-country="${code}">
+      <div class="country__art" style="--a:${c.colors[0]};--b:${c.colors[1]}">
+        ${flag(code, 'country__flag')}
+        <span class="country__emojis" aria-hidden="true">${items.slice(0, 3).map(p => `<span>${p.emoji}</span>`).join('')}</span>
+      </div>
+      <div class="country__info">
+        <div><h3>${c.name}</h3><p>${c.tagline}</p></div>
+        <span class="country__count">${plural(items.length, 'producto', 'productos')} ${icon('arrow')}</span>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+function renderCategories() {
+  $('#categoryGrid').innerHTML = CATEGORIES.map(cat => {
+    const n = PRODUCTS.filter(p => p.category === cat.id).length;
+    return `<a class="cat reveal" href="#catalogo" data-category="${cat.id}">
+      <span class="cat__emoji" aria-hidden="true">${cat.emoji}</span>
+      <span class="cat__name">${cat.id}</span>
+      <span class="cat__text">${cat.text}</span>
+      <span class="cat__count">${plural(n, 'producto', 'productos')}</span>
+    </a>`;
+  }).join('');
+}
+
+function renderFeatured() {
+  const top = [...PRODUCTS].sort((a, b) => b.pop - a.pop).slice(0, 4);
+  $('#featuredGrid').innerHTML = top.map(productCard).join('');
+}
+
+function renderOrbit() {
+  const codes = Object.keys(COUNTRIES);
+  $('#orbitFlags').innerHTML = codes.map((code, i) =>
+    `<a class="orbit__item" href="#catalogo" data-country="${code}" style="--a:${(360 / codes.length) * i - 90}deg">${flag(code)}${COUNTRIES[code].name}</a>`
+  ).join('');
+  $('#orbitCaption').textContent = `${codes.length} países · ${PRODUCTS.length} productos`;
+}
+
+function renderFooter() {
+  $('#footerCountries').innerHTML = Object.entries(COUNTRIES).map(([code, c]) =>
+    `<li><a href="#catalogo" data-country="${code}">${flag(code)} ${c.name}</a></li>`
+  ).join('');
+}
+
+/* ---------- Catálogo y filtros ---------- */
+function renderFilters() {
+  $('#filterCountries').innerHTML = Object.entries(COUNTRIES).map(([code, c]) => `
+    <label class="check">
+      <input type="checkbox" value="${code}" data-filter="countries">
+      <span class="check__box">${icon('check')}</span>
+      ${flag(code)}<span class="check__label">${c.name}</span>
+      <span class="check__n">${PRODUCTS.filter(p => p.country === code).length}</span>
+    </label>`).join('');
+  $('#filterCategories').innerHTML = CATEGORIES.map(cat => `
+    <label class="check">
+      <input type="checkbox" value="${cat.id}" data-filter="categories">
+      <span class="check__box">${icon('check')}</span>
+      <span class="check__label">${cat.id}</span>
+      <span class="check__n">${PRODUCTS.filter(p => p.category === cat.id).length}</span>
+    </label>`).join('');
+}
+
+function getFiltered() {
+  const f = state.filters;
+  const q = normalize(f.q.trim());
+  const list = PRODUCTS.filter(p =>
+    (!f.countries.size || f.countries.has(p.country)) &&
+    (!f.categories.size || f.categories.has(p.category)) &&
+    p.price <= f.max &&
+    (!q || normalize(`${p.name} ${p.desc} ${p.category} ${p.region} ${COUNTRIES[p.country].name}`).includes(q))
+  );
+  const sorters = {
+    popular: (a, b) => b.pop - a.pop,
+    new: (a, b) => b.added.localeCompare(a.added),
+    'price-asc': (a, b) => a.price - b.price,
+    'price-desc': (a, b) => b.price - a.price,
+  };
+  return list.sort(sorters[f.sort] || sorters.popular);
+}
+
+function renderCatalog() {
+  const list = getFiltered();
+  $('#productGrid').innerHTML = list.map(productCard).join('');
+  $('#resultCount').textContent = plural(list.length, 'producto', 'productos');
+  $('#applyFilters').textContent = `Ver ${plural(list.length, 'producto', 'productos')}`;
+  $('#emptyState').hidden = list.length > 0;
+  renderChips();
+  syncFilterInputs();
+}
+
+function renderChips() {
+  const f = state.filters;
+  const chips = [];
+  f.countries.forEach(c => chips.push({ key: `countries|${c}`, label: `${flag(c)} ${COUNTRIES[c].name}` }));
+  f.categories.forEach(c => chips.push({ key: `categories|${c}`, label: c }));
+  if (f.max < MAX_PRICE) chips.push({ key: 'max|', label: `Hasta ${fmt0(f.max)}` });
+  if (f.q.trim()) chips.push({ key: 'q|', label: `“${esc(f.q.trim())}”` });
+  $('#activeChips').innerHTML = chips.length
+    ? chips.map(c => `<button class="chip" type="button" data-chip="${esc(c.key)}" aria-label="Quitar filtro">${c.label}${icon('x')}</button>`).join('') +
+      '<button class="chip chip--clear" type="button" data-action="clear-filters">Limpiar todo</button>'
+    : '';
+}
+
+function syncFilterInputs() {
+  const f = state.filters;
+  $$('input[data-filter]').forEach(input => { input.checked = f[input.dataset.filter].has(input.value); });
+  $('#priceRange').value = f.max;
+  $('#priceLabel').textContent = fmt0(f.max);
+  $('#sortSelect').value = f.sort;
+  const search = $('#searchInput');
+  if (document.activeElement !== search) search.value = f.q;
+}
+
+function resetFilters(keepSort = true) {
+  const f = state.filters;
+  f.countries.clear(); f.categories.clear(); f.max = MAX_PRICE; f.q = '';
+  if (!keepSort) f.sort = 'popular';
+}
+
+function showOnly(key, value) {
+  resetFilters();
+  state.filters[key].add(value);
+  renderCatalog();
+}
+
+/* ---------- Carrito ---------- */
+function cartItems() {
+  return Object.entries(state.cart).map(([id, qty]) => ({ p: byId(id), qty })).filter(x => x.p);
+}
+
+function saveCart() { store.set('cart', state.cart); }
+
+function addToCart(id, qty = 1) {
+  const p = byId(id);
+  if (!p) return;
+  state.cart[id] = Math.min((state.cart[id] || 0) + qty, 99);
+  saveCart();
+  renderCart();
+  bump('#cartCount');
+  toast(`<strong>${esc(p.name)}</strong> se añadió al carrito`, { label: 'Ver carrito', action: 'open-cart' });
+}
+
+function setQty(id, qty) {
+  if (qty <= 0) delete state.cart[id];
+  else state.cart[id] = Math.min(qty, 99);
+  saveCart();
+  renderCart();
+}
+
+function renderCart() {
+  const items = cartItems();
+  const count = items.reduce((s, x) => s + x.qty, 0);
+  const subtotal = items.reduce((s, x) => s + x.qty * x.p.price, 0);
+  const remaining = Math.max(CONFIG.freeShipping - subtotal, 0);
+  const pct = Math.min(subtotal / CONFIG.freeShipping, 1) * 100;
+
+  const countEl = $('#cartCount');
+  countEl.textContent = count;
+  countEl.hidden = count === 0;
+  $('#cartHeadCount').textContent = count ? `(${count})` : '';
+
+  $('#shipProgress').innerHTML = items.length
+    ? `<p>${remaining > 0 ? `Te faltan <strong>${fmt(remaining)}</strong> para el <strong>envío gratis</strong>` : '🎉 ¡Tienes <strong>envío gratis</strong>!'}</p>
+       <div class="ship__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}" aria-label="Progreso hacia el envío gratis"><span style="width:${pct}%"></span></div>`
+    : '';
+
+  $('#cartItems').innerHTML = items.length
+    ? items.map(({ p, qty }) => `
+      <div class="line">
+        <button class="line__media" type="button" data-open="${p.id}" aria-label="Ver ${esc(p.name)}">${visual(p, 0, true)}</button>
+        <div>
+          <p class="origin">${flag(p.country)} ${COUNTRIES[p.country].name}</p>
+          <button class="line__name" type="button" data-open="${p.id}">${p.name}</button>
+          <div class="stepper">
+            <button type="button" data-qty="${p.id}" data-step="-1" aria-label="Quitar una unidad">${icon('minus')}</button>
+            <span aria-live="polite">${qty}</span>
+            <button type="button" data-qty="${p.id}" data-step="1" aria-label="Añadir una unidad">${icon('plus')}</button>
+          </div>
+        </div>
+        <div class="line__right">
+          <span class="line__price">${fmt(p.price * qty)}</span>
+          <button class="icon-btn line__remove" type="button" data-remove="${p.id}" aria-label="Eliminar ${esc(p.name)}">${icon('trash')}</button>
+        </div>
+      </div>`).join('')
+    : `<div class="drawer-empty">
+        <span class="drawer-empty__emoji" aria-hidden="true">🧳</span>
+        <h3>Tu carrito está vacío</h3>
+        <p>Empieza tu viaje: tenemos ${PRODUCTS.length} productos de ${Object.keys(COUNTRIES).length} países esperándote.</p>
+        <a class="btn btn--primary btn--sm" href="#catalogo" data-action="close">Explorar productos</a>
+      </div>`;
+
+  $('#cartFoot').innerHTML = items.length
+    ? `<div class="sum-row"><span>Subtotal</span><span>${fmt(subtotal)}</span></div>
+       <div class="sum-row"><span>Envío</span><span>${remaining > 0 ? 'Se calcula al pagar' : 'Gratis'}</span></div>
+       <div class="sum-row sum-row--total"><span>Total estimado</span><span>${fmt(subtotal)}</span></div>
+       <button class="btn btn--primary btn--block" type="button" data-action="checkout">Finalizar compra ${icon('arrow', 'icon--arrow')}</button>
+       <p class="drawer__note">${icon('lock')} Pago 100 % seguro y cifrado</p>`
+    : '';
+  $('#cartFoot').hidden = !items.length;
+}
+
+/* ---------- Favoritos ---------- */
+function toggleFav(id) {
+  const p = byId(id);
+  if (!p) return;
+  const on = !state.favs.has(id);
+  on ? state.favs.add(id) : state.favs.delete(id);
+  store.set('favs', [...state.favs]);
+  $$(`[data-fav="${id}"]`).forEach(btn => {
+    btn.classList.toggle('is-on', on);
+    btn.setAttribute('aria-pressed', on);
+    btn.setAttribute('aria-label', `${on ? 'Quitar de' : 'Añadir a'} favoritos: ${p.name}`);
+  });
+  renderFavs();
+  if (on) { bump('#favCount'); toast(`<strong>${esc(p.name)}</strong> se guardó en favoritos`, { label: 'Ver favoritos', action: 'open-favs' }); }
+}
+
+function renderFavs() {
+  const list = [...state.favs].map(byId).filter(Boolean);
+  const countEl = $('#favCount');
+  countEl.textContent = list.length;
+  countEl.hidden = list.length === 0;
+  $('#favHeadCount').textContent = list.length ? `(${list.length})` : '';
+  $('#favItems').innerHTML = list.length
+    ? list.map(p => `
+      <div class="line">
+        <button class="line__media" type="button" data-open="${p.id}" aria-label="Ver ${esc(p.name)}">${visual(p, 0, true)}</button>
+        <div>
+          <p class="origin">${flag(p.country)} ${COUNTRIES[p.country].name}</p>
+          <button class="line__name" type="button" data-open="${p.id}">${p.name}</button>
+          <button class="btn btn--dark btn--sm add-btn" type="button" data-add="${p.id}">${icon('bag')}<span>Añadir</span></button>
+        </div>
+        <div class="line__right">
+          <span class="line__price">${fmt(p.price)}</span>
+          <button class="icon-btn line__remove" type="button" data-fav="${p.id}" aria-label="Quitar ${esc(p.name)} de favoritos">${icon('trash')}</button>
+        </div>
+      </div>`).join('')
+    : `<div class="drawer-empty">
+        <span class="drawer-empty__emoji" aria-hidden="true">🤍</span>
+        <h3>Aún no tienes favoritos</h3>
+        <p>Toca el corazón de cualquier producto para guardarlo aquí.</p>
+        <a class="btn btn--primary btn--sm" href="#catalogo" data-action="close">Descubrir productos</a>
+      </div>`;
+}
+
+/* ---------- Ficha de producto ---------- */
+let modalQty = 1;
+let modalId = null;
+
+function openProduct(id) {
+  const p = byId(id);
+  if (!p) return;
+  const c = COUNTRIES[p.country];
+  modalId = id;
+  modalQty = 1;
+  const related = PRODUCTS
+    .filter(x => x.id !== id && (x.country === p.country || x.category === p.category))
+    .sort((a, b) => (b.country === p.country) - (a.country === p.country) || b.pop - a.pop)
+    .slice(0, 4);
+
+  $('#modalContent').innerHTML = `
+    <div class="pd">
+      <div class="pd__gallery">
+        <div class="pd__main" id="pdMain">${visual(p)}${badgesHtml(p)}</div>
+        <div class="pd__thumbs">
+          ${[0, 1, 2].map(v => `<button class="pd__thumb ${v === 0 ? 'is-active' : ''}" type="button" data-thumb="${v}" aria-label="Vista ${v + 1}">${visual(p, v, true)}</button>`).join('')}
+        </div>
+      </div>
+      <div class="pd__info">
+        <p class="origin">${flag(p.country)} ${c.name} · ${p.region}</p>
+        <h2 id="modalTitle">${p.name}</h2>
+        <div class="rating">${stars(p.rating)}<span>${p.rating.toFixed(1)} · ${p.reviews} opiniones</span></div>
+        <div class="pd__price">${priceHtml(p)}</div>
+        <p class="pd__text">${p.long}</p>
+        <dl class="pd__specs">
+          <div><dt>Origen</dt><dd>${c.name}</dd></div>
+          <div><dt>Categoría</dt><dd>${p.category}</dd></div>
+          <div><dt>Formato</dt><dd>${p.size}</dd></div>
+        </dl>
+        <div class="pd__buy">
+          <div class="stepper stepper--lg">
+            <button type="button" data-action="mqty" data-step="-1" aria-label="Menos unidades" disabled>${icon('minus')}</button>
+            <span id="mqty" aria-live="polite">1</span>
+            <button type="button" data-action="mqty" data-step="1" aria-label="Más unidades">${icon('plus')}</button>
+          </div>
+          <button class="btn btn--primary pd__add" type="button" data-add="${p.id}" data-from-modal>${icon('bag')}<span>Añadir al carrito</span></button>
+          ${favButton(p, 'icon-btn icon-btn--outline fav-toggle')}
+        </div>
+        <ul class="pd__perks">
+          <li>${icon('truck')} Envío en 48–72 h · gratis desde ${fmt0(CONFIG.freeShipping)}</li>
+          <li>${icon('rotate')} Devoluciones gratis durante 30 días</li>
+          <li>${icon('shield')} Autenticidad garantizada desde origen</li>
+        </ul>
+      </div>
+    </div>
+    ${related.length ? `<div class="pd__related"><h3>También te puede gustar</h3><div class="mini-grid">${related.map(miniCard).join('')}</div></div>` : ''}`;
+
+  const modal = $('#productModal');
+  openOverlay(modal);
+  $('.modal__panel', modal).scrollTop = 0;
+}
+
+function setModalQty(step) {
+  modalQty = Math.min(Math.max(modalQty + step, 1), 99);
+  $('#mqty').textContent = modalQty;
+  $('[data-action="mqty"][data-step="-1"]').disabled = modalQty <= 1;
+}
+
+/* ---------- Capas (cajones y modal) ---------- */
+let openEl = null;
+let lastFocus = null;
+
+function openOverlay(el) {
+  if (openEl && openEl !== el) closeOverlay(false);
+  if (openEl !== el) lastFocus = document.activeElement;
+  el.inert = false;
+  el.classList.add('is-open');
+  $('#backdrop').classList.add('is-open');
+  document.body.classList.add('no-scroll');
+  openEl = el;
+  requestAnimationFrame(() => {
+    const target = el.querySelector('.modal__close, .drawer__head .icon-btn, .filters__close');
+    if (target) target.focus({ preventScroll: true });
+  });
+}
+
+function closeOverlay(restoreFocus = true) {
+  if (!openEl) return;
+  const el = openEl;
+  el.classList.remove('is-open');
+  if (el.hasAttribute('data-inert')) el.inert = true;
+  $('#backdrop').classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
+  openEl = null;
+  if (restoreFocus && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+}
+
+/* ---------- Avisos ---------- */
+let toastTimer;
+function toast(html, action) {
+  const el = $('#toast');
+  el.innerHTML = `<span>${html}</span>${action ? `<button type="button" data-action="${action.action}">${action.label}</button>` : ''}`;
+  el.classList.add('is-show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('is-show'), 3600);
+}
+
+function bump(sel) {
+  const el = $(sel);
+  el.classList.remove('bump');
+  void el.offsetWidth;
+  el.classList.add('bump');
+}
+
+function flashAdded(btn) {
+  if (btn.classList.contains('is-added')) return;
+  const original = btn.innerHTML;
+  btn.classList.add('is-added');
+  btn.innerHTML = `${icon('check')}<span>Añadido</span>`;
+  setTimeout(() => { btn.innerHTML = original; btn.classList.remove('is-added'); }, 1400);
+}
+
+/* ---------- Tema claro / oscuro ---------- */
+const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const currentTheme = () => document.documentElement.dataset.theme || (darkQuery.matches ? 'dark' : 'light');
+
+function updateThemeIcon() {
+  const dark = currentTheme() === 'dark';
+  const btn = $('#themeBtn');
+  btn.innerHTML = icon(dark ? 'sun' : 'moon');
+  btn.setAttribute('aria-label', dark ? 'Activar modo claro' : 'Activar modo oscuro');
+  $('meta[name="theme-color"]').setAttribute('content', dark ? '#16140F' : '#FAF7F2');
+}
+
+function toggleTheme() {
+  const next = currentTheme() === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  store.set('theme', next);
+  updateThemeIcon();
+}
+
+/* ---------- Eventos ---------- */
+function goToCatalog() {
+  $('#catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function handleAction(action, el, e) {
+  switch (action) {
+    case 'open-menu': openOverlay($('#menuDrawer')); break;
+    case 'open-cart': $('#toast').classList.remove('is-show'); openOverlay($('#cartDrawer')); break;
+    case 'open-favs': $('#toast').classList.remove('is-show'); openOverlay($('#favDrawer')); break;
+    case 'open-filters': openOverlay($('#filters')); break;
+    case 'close': closeOverlay(!el.matches('a')); break;
+    case 'toggle-theme': toggleTheme(); break;
+    case 'toggle-search': {
+      const header = $('#header');
+      header.classList.toggle('is-searching');
+      if (header.classList.contains('is-searching')) $('#searchInput').focus();
+      break;
+    }
+    case 'novedades':
+      closeOverlay(false);
+      resetFilters();
+      state.filters.sort = 'new';
+      renderCatalog();
+      break;
+    case 'clear-filters': resetFilters(); renderCatalog(); break;
+    case 'mqty': setModalQty(Number(el.dataset.step)); break;
+    case 'checkout':
+      toast('Versión de demostración: aquí se conectará tu pasarela de pago.');
+      break;
+    case 'whatsapp':
+      e.preventDefault();
+      toast('Añade tu número de WhatsApp en <strong>app.js</strong> (CONFIG.whatsapp).');
+      break;
+  }
+}
+
+function bindEvents() {
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-add],[data-fav],[data-open],[data-qty],[data-remove],[data-chip],[data-thumb],[data-country],[data-category],[data-action]');
+    if (!t) return;
+
+    if (t.dataset.add) {
+      addToCart(t.dataset.add, t.hasAttribute('data-from-modal') ? modalQty : 1);
+      flashAdded(t);
+    } else if (t.dataset.fav) {
+      toggleFav(t.dataset.fav);
+    } else if (t.dataset.open) {
+      openProduct(t.dataset.open);
+    } else if (t.dataset.qty) {
+      setQty(t.dataset.qty, (state.cart[t.dataset.qty] || 0) + Number(t.dataset.step));
+    } else if (t.dataset.remove) {
+      setQty(t.dataset.remove, 0);
+    } else if (t.dataset.chip) {
+      const [key, ...rest] = t.dataset.chip.split('|');
+      const value = rest.join('|');
+      if (key === 'max') state.filters.max = MAX_PRICE;
+      else if (key === 'q') state.filters.q = '';
+      else state.filters[key].delete(value);
+      renderCatalog();
+    } else if (t.dataset.thumb) {
+      const p = byId(modalId);
+      $('#pdMain').innerHTML = visual(p, Number(t.dataset.thumb)) + badgesHtml(p);
+      $$('.pd__thumb').forEach(b => b.classList.toggle('is-active', b === t));
+    } else if (t.dataset.country) {
+      closeOverlay(false);
+      showOnly('countries', t.dataset.country);
+    } else if (t.dataset.category) {
+      showOnly('categories', t.dataset.category);
+    } else if (t.dataset.action) {
+      handleAction(t.dataset.action, t, e);
+    }
+  });
+
+  // Cerrar el modal al hacer clic fuera del panel
+  $('#productModal').addEventListener('click', e => { if (e.target.id === 'productModal') closeOverlay(); });
+
+  // Filtros
+  $('#filters').addEventListener('change', e => {
+    const input = e.target;
+    if (input.dataset.filter) {
+      const set = state.filters[input.dataset.filter];
+      input.checked ? set.add(input.value) : set.delete(input.value);
+      renderCatalog();
+    }
+  });
+  $('#priceRange').addEventListener('input', e => {
+    state.filters.max = Number(e.target.value);
+    renderCatalog();
+  });
+  $('#sortSelect').addEventListener('change', e => {
+    state.filters.sort = e.target.value;
+    renderCatalog();
+  });
+
+  // Buscador
+  let scrolledForSearch = false;
+  const search = $('#searchInput');
+  search.addEventListener('input', () => {
+    state.filters.q = search.value;
+    renderCatalog();
+    if (search.value.trim() && !scrolledForSearch) { scrolledForSearch = true; goToCatalog(); }
+  });
+  search.addEventListener('blur', () => { scrolledForSearch = false; });
+  $('#searchForm').addEventListener('submit', e => {
+    e.preventDefault();
+    goToCatalog();
+    $('#header').classList.remove('is-searching');
+    search.blur();
+  });
+
+  // Boletín
+  $('#newsletterForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const input = $('#nlEmail');
+    const form = e.currentTarget;
+    if (!input.value.trim() || !input.checkValidity()) {
+      form.classList.remove('is-error'); void form.offsetWidth; form.classList.add('is-error');
+      input.focus();
+      toast('Escribe un correo electrónico válido.');
+      return;
+    }
+    $('#newsletterWrap').innerHTML = `<p class="nl-success">${icon('check')}<span>¡Gracias por suscribirte! Usa el código <strong>BIENVENIDO10</strong> en tu primera compra.</span></p>`;
+  });
+
+  // Teclado
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      if (openEl) closeOverlay();
+      else $('#header').classList.remove('is-searching');
+    }
+  });
+
+  // Cabecera con sombra al hacer scroll
+  const header = $('#header');
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Si se agranda la pantalla con los filtros abiertos, se cierran
+  window.addEventListener('resize', () => {
+    if (openEl && openEl.id === 'filters' && window.innerWidth >= 960) closeOverlay(false);
+  });
+
+  darkQuery.addEventListener('change', updateThemeIcon);
+}
+
+function setupWhatsApp() {
+  const fab = $('#waFab');
+  if (CONFIG.whatsapp) {
+    fab.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.whatsappText)}`;
+    fab.target = '_blank';
+    fab.rel = 'noopener';
+  } else {
+    fab.dataset.action = 'whatsapp';
+  }
+}
+
+function setupReveal() {
+  const items = $$('.reveal');
+  if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('is-visible')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  items.forEach((el, i) => { el.style.transitionDelay = `${(i % 6) * 60}ms`; io.observe(el); });
+}
+
+function hydrateIcons(root = document) {
+  $$('i[data-icon]', root).forEach(el => { el.outerHTML = icon(el.dataset.icon, el.className); });
+  $$('[data-stars]', root).forEach(el => {
+    el.innerHTML = Array.from({ length: Number(el.dataset.stars) }, () => icon('star', 'icon--fill')).join('');
+  });
+}
+
+/* ---------- Inicio ---------- */
+function init() {
+  hydrateIcons();
+  renderHero();
+  renderCountries();
+  renderCategories();
+  renderFeatured();
+  renderFilters();
+  renderCatalog();
+  renderOrbit();
+  renderFooter();
+  renderCart();
+  renderFavs();
+  updateThemeIcon();
+  setupWhatsApp();
+  bindEvents();
+  setupReveal();
+}
+
+init();
+
+</script>
+</body>
+</html>
